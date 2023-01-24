@@ -16,7 +16,6 @@ class Easylink {
   }
 
   Future<bool> connect() async {
-    await _ecr.sendSyncFrame();
     await _ecr.send(data: Command.connect.data);
 
     return true;
